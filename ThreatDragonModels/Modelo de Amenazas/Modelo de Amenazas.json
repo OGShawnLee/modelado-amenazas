@@ -180,7 +180,7 @@
                   "id": "1cae95c3-84b1-487d-8fad-aa76a07cd426",
                   "title": "Sistema Web DDoS",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Denial of service",
                   "description": "El Sistema Web no cuenta con un balanceador de carga implementado ni mecanismos de bloqueos así que un atacante puede realizar ataques DDoS.",
                   "mitigation": "Se utiliza un balanceo de cargas en el servidor web. \n\nSe monitorean las direcciones IP de los clientes y al encontrar un posible ataque, se bloquea el acceso. \n\nSe considera contratar un servicio de VPN para ocultar la \ndirección IP pública a los clientes.",
@@ -195,7 +195,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             }
@@ -214,11 +214,13 @@
                 "text": "Vistas Web en Disco"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -315,13 +317,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "d93b97f1-f91a-48a3-9996-ee2866c1b7a4",
+                  "title": "Modificación de Vistas Web",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Atacantes podrían modificar las vistas de la aplicación web.",
+                  "mitigation": "Solo administradores deben tener acceso a las vistas, de otro modo solo sería de lectura.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -338,8 +360,8 @@
                 "text": "Usuario General"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -436,9 +458,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "c8a67d66-577c-4994-b64a-1c6417fb3e52",
+                  "title": "Suplantación de identidad de Usuario General",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "Acción de amenaza destinada a acceder y utilizar las credenciales de otro usuario, como el nombre de usuario y la contraseña. ",
+                  "mitigation": "Requerir autenticación multifactor, proteger credenciales o no almacenar datos secretos.  ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -455,8 +495,8 @@
                 "text": "Bibliotecario"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -553,9 +593,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "52cf8141-18c0-417c-a6a0-fa8567ebc85f",
+                  "title": "Suplantación de identidad de Bibliotecario",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Acción de amenaza destinada a acceder y utilizar las credenciales de otro usuario, como el nombre de usuario y la contraseña. ",
+                  "mitigation": "Utilizar autenticación multifactor, proteger credenciales o no almacenar secretos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -596,7 +654,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -617,13 +676,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "cf67b581-896b-4242-95b8-d04809ad4ff2",
+                  "title": "Request y Respons sin HTTPS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "La información es transmitida sin HTTPS así que pueden ser interceptadas por cualquier persona en el Internet.",
+                  "mitigation": "Adquirir licencia para utilizar encriptación mediante HTTPS.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Web Response"
@@ -684,10 +762,10 @@
                   "id": "3e8032af-713c-4607-97a3-d4ab322664e1",
                   "title": "Request y Response sin HTTPS",
                   "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
                   "description": "La información es transmitida sin HTTPS así que pueden ser interceptadas por cualquier persona en el Internet.",
-                  "mitigation": "Adquirir licencia para ",
+                  "mitigation": "Adquirir licencia para utilizar encriptación al utilizar HTTPS.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
@@ -697,7 +775,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 1,
-                "informationDisclosure": 0,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -834,7 +912,7 @@
               "threats": [
                 {
                   "id": "cfb49c35-8458-4fa5-a427-f77514244f26",
-                  "title": "Request y Response sin HTTP",
+                  "title": "Request y Response sin HTTPS",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Information disclosure",
@@ -849,7 +927,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 3,
+                "informationDisclosure": 4,
                 "denialOfService": 0
               }
             },
@@ -906,10 +984,29 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "5146d740-d1f0-4e01-9525-f2b37d7825f3",
+                  "title": "Ataque man-in-the-middle en resultados de Web Query",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Un atacante podría interceptar las consultas de la base de datos en tránsito y obtener información confidencial, como credenciales de la base de datos, parámetros de consulta o resultados de la consulta (es poco probable ya que el flujo de datos se realiza a través de una red privada). ",
+                  "mitigation": "Aplicar una conexión cifrada en el servidor de base de datos. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "cd94f637-bdc2-4311-a1f1-45841802fa11"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Resultado Web Query"
@@ -983,8 +1080,16 @@
             },
             "vertices": [
               {
-                "x": 430,
+                "x": 380,
+                "y": 350
+              },
+              {
+                "x": 420,
                 "y": 420
+              },
+              {
+                "x": 510,
+                "y": 440
               }
             ]
           },
@@ -999,7 +1104,7 @@
                 "sourceMarker": {
                   "name": ""
                 },
-                "strokeDasharray": null
+                "strokeDasharray": "4 3"
               }
             },
             "width": 200,
@@ -1010,7 +1115,7 @@
               "type": "tm.Flow",
               "name": "Lee Web App Config",
               "description": "",
-              "outOfScope": false,
+              "outOfScope": true,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1051,7 +1156,7 @@
                 "sourceMarker": {
                   "name": ""
                 },
-                "strokeDasharray": null
+                "strokeDasharray": "4 3"
               }
             },
             "width": 200,
@@ -1062,7 +1167,7 @@
               "type": "tm.Flow",
               "name": "Página HTML",
               "description": "",
-              "outOfScope": false,
+              "outOfScope": true,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1110,11 +1215,13 @@
                 "text": "MySQL DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1211,13 +1318,46 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "5fa4e0bb-7cd8-4b24-8f59-9d462526f370",
+                  "title": "Divulgación de información de DB",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Un atacante podría enviar una consulta a la BD. ",
+                  "mitigation": "Requerir autenticación y autorización de todas las consultas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "c0a63aa3-86f8-4784-8729-35eda97f7d42",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Un atacante podría obtener las credenciales de la base de y utilizarlas para realizar consultas no autorizadas. ",
+                  "mitigation": "Utilizar un firewall para restringir el acceso a la base de datos únicamente a la dirección IP del trabajador en segundo plano. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 4,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1234,11 +1374,13 @@
                 "text": "Web App Config"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1335,13 +1477,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "ed35ca11-8932-43de-b158-56bd9c9b5913",
+                  "title": "",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "La configuración de la aplicación web almacena las credenciales utilizadas por la aplicación web para acceder a la cola de mensajes. Un atacante podría robarlos y \npara leer datos confidenciales o colocar mensajes dudosos en la cola.",
+                  "mitigation": "Credenciales deben estar cifradas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           }
         ]
@@ -1349,6 +1511,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Edgar Vázquez García",
-    "threatTop": 5
+    "threatTop": 13
   }
 }
