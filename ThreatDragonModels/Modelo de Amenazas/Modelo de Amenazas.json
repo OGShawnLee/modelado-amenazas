@@ -1,0 +1,18 @@
+{
+  "version": "2.6.2",
+  "release_version": "0.0.0",
+  "released_at": "2026-09-08",
+  "summary": {
+    "title": "Modelo de Amenazas",
+    "owner": "Edgar Vázquez García",
+    "description": "Modelado de Amenazas en base al sitio web de biblioteca universitaria que brinda servicios en línea a los bibliotecarios y usuarios de la biblioteca.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "Edgar Vázquez García",
+    "threatTop": 0
+  }
+}
