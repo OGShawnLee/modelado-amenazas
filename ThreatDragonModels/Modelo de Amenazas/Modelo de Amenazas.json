@@ -18,11 +18,1337 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.6.2",
-        "cells": []
+        "cells": [
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Servidor Web / DB",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "e0b5338e-f2cb-4506-8eee-edeccaea9e31",
+                "3776d6b4-ddb2-497e-b228-74ff09c2b885"
+              ],
+              "containedElements": [
+                "9a362be2-4514-4548-ac72-f29171fc8d33"
+              ]
+            },
+            "labels": [
+              "Frontera Servidor Web / DB"
+            ],
+            "id": "cd94f637-bdc2-4311-a1f1-45841802fa11",
+            "source": {
+              "x": 820,
+              "y": 220
+            },
+            "target": {
+              "x": 580,
+              "y": 570
+            },
+            "vertices": [
+              {
+                "x": 620,
+                "y": 400
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 330,
+              "y": 260
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Sistema Web Bibliotecario"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "94a35c03-959c-414e-b17c-a9b90ff4a493"
+                },
+                {
+                  "group": "right",
+                  "id": "38f454f0-912a-45cb-b191-1c2b5a2f6357"
+                },
+                {
+                  "group": "bottom",
+                  "id": "1d8d8d31-8af3-4086-8a2b-497959cb7556"
+                },
+                {
+                  "group": "left",
+                  "id": "30f23213-cdf1-4e0a-b35a-96dfec614683"
+                }
+              ]
+            },
+            "id": "6dbc4171-314d-4fc8-a8ca-edb1dbaeb61f",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Process",
+              "name": "Sistema Web Bibliotecario",
+              "description": "El sitio web de la biblioteca \nuniversitaria se ejecutará en un \nservidor Linux con Apache. Este \nservidor será reforzado según el \nestándar de protección de servidores \nde la universidad.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "1cae95c3-84b1-487d-8fad-aa76a07cd426",
+                  "title": "Sistema Web DDoS",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "El Sistema Web no cuenta con un balanceador de carga implementado ni mecanismos de bloqueos así que un atacante puede realizar ataques DDoS.",
+                  "mitigation": "Se utiliza un balanceo de cargas en el servidor web. \n\nSe monitorean las direcciones IP de los clientes y al encontrar un posible ataque, se bloquea el acceso. \n\nSe considera contratar un servicio de VPN para ocultar la \ndirección IP pública a los clientes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 106.25,
+              "y": 410
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Vistas Web en Disco"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "6e7242cb-1f19-416f-aebc-f5c615b52f15"
+                },
+                {
+                  "group": "right",
+                  "id": "b8638d48-8047-48d9-8e8f-d0362fc7a411"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c3268476-a519-4148-a314-47ec06ecfc98"
+                },
+                {
+                  "group": "left",
+                  "id": "e1f438cd-6c25-474b-827c-a73caeadbbfe"
+                }
+              ]
+            },
+            "id": "9553f64a-c390-4000-833a-272a55224ca6",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Store",
+              "name": "Vistas Web en Disco",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 113.75,
+              "y": 0
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Usuario General"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "518eed68-92c7-4beb-b369-d25eed070167"
+                },
+                {
+                  "group": "right",
+                  "id": "14f86190-d7b7-4b5a-8b9a-a59ca8bd4d6a"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4bd05dc5-ab15-45e0-975f-9cf3b2038c8b"
+                },
+                {
+                  "group": "left",
+                  "id": "e7d33074-9520-47ff-9ede-e1d85e2c7cd8"
+                }
+              ]
+            },
+            "id": "cd51be27-220a-492d-a14f-1298d8ba497f",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Usuario General",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 370,
+              "y": 1.3145040611561853e-13
+            },
+            "size": {
+              "width": 110,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Bibliotecario"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "518eed68-92c7-4beb-b369-d25eed070167"
+                },
+                {
+                  "group": "right",
+                  "id": "14f86190-d7b7-4b5a-8b9a-a59ca8bd4d6a"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4bd05dc5-ab15-45e0-975f-9cf3b2038c8b"
+                },
+                {
+                  "group": "left",
+                  "id": "e7d33074-9520-47ff-9ede-e1d85e2c7cd8"
+                }
+              ]
+            },
+            "id": "af05e06f-8b51-40ad-aca3-9134bf4e11a1",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Bibliotecario",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 5,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Usuario / Servidor Web",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Frontera Usuario / Servidor Web"
+            ],
+            "id": "24976b62-10e9-483b-9f20-e7f432c20786",
+            "source": {
+              "x": 10,
+              "y": 100
+            },
+            "target": {
+              "x": 670,
+              "y": 40
+            },
+            "vertices": [
+              {
+                "x": 320,
+                "y": 130
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Web Response"
+            ],
+            "id": "3f34d574-a1bf-4ae3-a6c5-b26465fceec3",
+            "source": {
+              "cell": "6dbc4171-314d-4fc8-a8ca-edb1dbaeb61f",
+              "port": "94a35c03-959c-414e-b17c-a9b90ff4a493"
+            },
+            "target": {
+              "cell": "af05e06f-8b51-40ad-aca3-9134bf4e11a1",
+              "port": "4bd05dc5-ab15-45e0-975f-9cf3b2038c8b"
+            },
+            "vertices": [
+              {
+                "x": 430,
+                "y": 220
+              },
+              {
+                "x": 470,
+                "y": 140
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "3e8032af-713c-4607-97a3-d4ab322664e1",
+                  "title": "Request y Response sin HTTPS",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "La información es transmitida sin HTTPS así que pueden ser interceptadas por cualquier persona en el Internet.",
+                  "mitigation": "Adquirir licencia para ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Web Request"
+            ],
+            "id": "aef3b3ce-e567-4d2c-99dc-784ea5110bcd",
+            "source": {
+              "cell": "af05e06f-8b51-40ad-aca3-9134bf4e11a1",
+              "port": "4bd05dc5-ab15-45e0-975f-9cf3b2038c8b"
+            },
+            "target": {
+              "cell": "6dbc4171-314d-4fc8-a8ca-edb1dbaeb61f",
+              "port": "94a35c03-959c-414e-b17c-a9b90ff4a493"
+            },
+            "vertices": [
+              {
+                "x": 500,
+                "y": 140
+              },
+              {
+                "x": 520,
+                "y": 230
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "78bf8923-ba31-4e02-8af6-93f673e3cbb4",
+                  "title": "Request y Response sin HTTPS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "La información es transmitida sin HTTPS así que pueden ser interceptadas por cualquier persona en el Internet.",
+                  "mitigation": "Adquirir licencia para utilizar encriptación mediante HTTPS.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Web Response"
+            ],
+            "id": "4b8bf11f-7cab-46e5-a888-3257bf4f7a42",
+            "source": {
+              "cell": "6dbc4171-314d-4fc8-a8ca-edb1dbaeb61f",
+              "port": "30f23213-cdf1-4e0a-b35a-96dfec614683"
+            },
+            "target": {
+              "cell": "cd51be27-220a-492d-a14f-1298d8ba497f",
+              "port": "4bd05dc5-ab15-45e0-975f-9cf3b2038c8b"
+            },
+            "vertices": [
+              {
+                "x": 220,
+                "y": 270
+              },
+              {
+                "x": 169.75,
+                "y": 200
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "cfb49c35-8458-4fa5-a427-f77514244f26",
+                  "title": "Request y Response sin HTTP",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "La información es transmitida sin HTTPS así que pueden ser interceptadas por cualquier persona en el Internet.",
+                  "mitigation": "Adquirir licencia para utilizar encriptación mediante HTTPS.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Web Request"
+            ],
+            "id": "1c87a307-1d04-4c47-bfde-a6afdf250728",
+            "source": {
+              "cell": "cd51be27-220a-492d-a14f-1298d8ba497f",
+              "port": "4bd05dc5-ab15-45e0-975f-9cf3b2038c8b"
+            },
+            "target": {
+              "cell": "6dbc4171-314d-4fc8-a8ca-edb1dbaeb61f",
+              "port": "30f23213-cdf1-4e0a-b35a-96dfec614683"
+            },
+            "vertices": [
+              {
+                "x": 220,
+                "y": 160
+              },
+              {
+                "x": 300,
+                "y": 220
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Resultado Web Query",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "cd94f637-bdc2-4311-a1f1-45841802fa11"
+              ]
+            },
+            "labels": [
+              "Resultado Web Query"
+            ],
+            "id": "e0b5338e-f2cb-4506-8eee-edeccaea9e31",
+            "source": {
+              "cell": "9a362be2-4514-4548-ac72-f29171fc8d33",
+              "port": "6e7242cb-1f19-416f-aebc-f5c615b52f15"
+            },
+            "target": {
+              "cell": "6dbc4171-314d-4fc8-a8ca-edb1dbaeb61f",
+              "port": "38f454f0-912a-45cb-b191-1c2b5a2f6357"
+            },
+            "vertices": [
+              {
+                "x": 700,
+                "y": 310
+              },
+              {
+                "x": 510,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Query",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "cd94f637-bdc2-4311-a1f1-45841802fa11"
+              ]
+            },
+            "labels": [
+              "Query"
+            ],
+            "id": "3776d6b4-ddb2-497e-b228-74ff09c2b885",
+            "source": {
+              "cell": "6dbc4171-314d-4fc8-a8ca-edb1dbaeb61f",
+              "port": "1d8d8d31-8af3-4086-8a2b-497959cb7556"
+            },
+            "target": {
+              "cell": "9a362be2-4514-4548-ac72-f29171fc8d33",
+              "port": "e1f438cd-6c25-474b-827c-a73caeadbbfe"
+            },
+            "vertices": [
+              {
+                "x": 430,
+                "y": 420
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Lee Web App Config",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Lee Web App Config"
+            ],
+            "id": "d40e6656-7956-4589-8b4f-ff5d742f8c14",
+            "source": {
+              "cell": "428516a6-5abc-4eb5-bfc3-e3a592e7b6b5",
+              "port": "6e7242cb-1f19-416f-aebc-f5c615b52f15"
+            },
+            "target": {
+              "cell": "6dbc4171-314d-4fc8-a8ca-edb1dbaeb61f",
+              "port": "1d8d8d31-8af3-4086-8a2b-497959cb7556"
+            },
+            "vertices": [
+              {
+                "x": 360,
+                "y": 440
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Página HTML",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Página HTML"
+            ],
+            "id": "48a129db-622d-4158-b944-f50c21d11251",
+            "source": {
+              "cell": "9553f64a-c390-4000-833a-272a55224ca6",
+              "port": "6e7242cb-1f19-416f-aebc-f5c615b52f15"
+            },
+            "target": {
+              "cell": "6dbc4171-314d-4fc8-a8ca-edb1dbaeb61f",
+              "port": "30f23213-cdf1-4e0a-b35a-96dfec614683"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 370
+              },
+              {
+                "x": 310,
+                "y": 330
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 700,
+              "y": 410
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "MySQL DB"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "6e7242cb-1f19-416f-aebc-f5c615b52f15"
+                },
+                {
+                  "group": "right",
+                  "id": "b8638d48-8047-48d9-8e8f-d0362fc7a411"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c3268476-a519-4148-a314-47ec06ecfc98"
+                },
+                {
+                  "group": "left",
+                  "id": "e1f438cd-6c25-474b-827c-a73caeadbbfe"
+                }
+              ]
+            },
+            "id": "9a362be2-4514-4548-ac72-f29171fc8d33",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Store",
+              "name": "MySQL DB",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 330,
+              "y": 487
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Web App Config"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "6e7242cb-1f19-416f-aebc-f5c615b52f15"
+                },
+                {
+                  "group": "right",
+                  "id": "b8638d48-8047-48d9-8e8f-d0362fc7a411"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c3268476-a519-4148-a314-47ec06ecfc98"
+                },
+                {
+                  "group": "left",
+                  "id": "e1f438cd-6c25-474b-827c-a73caeadbbfe"
+                }
+              ]
+            },
+            "id": "428516a6-5abc-4eb5-bfc3-e3a592e7b6b5",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Store",
+              "name": "Web App Config",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          }
+        ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "Edgar Vázquez García",
-    "threatTop": 0
+    "threatTop": 5
   }
 }
