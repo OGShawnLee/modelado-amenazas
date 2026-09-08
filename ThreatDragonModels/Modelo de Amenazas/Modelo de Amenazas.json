@@ -79,6 +79,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -162,11 +163,10 @@
               ]
             },
             "id": "6dbc4171-314d-4fc8-a8ca-edb1dbaeb61f",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "Sistema Web Bibliotecario",
-              "description": "El sitio web de la biblioteca \nuniversitaria se ejecutará en un \nservidor Linux con Apache. Este \nservidor será reforzado según el \nestándar de protección de servidores \nde la universidad.",
+              "description": "El sitio web de la biblioteca universitaria ejecutado en un servidor Linux con Apache. Reforzado según el estándar de protección de servidores de la universidad.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -226,6 +226,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -309,7 +310,6 @@
               ]
             },
             "id": "9553f64a-c390-4000-833a-272a55224ca6",
-            "zIndex": 2,
             "data": {
               "type": "tm.Store",
               "name": "Vistas Web en Disco",
@@ -367,6 +367,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -450,11 +451,10 @@
               ]
             },
             "id": "cd51be27-220a-492d-a14f-1298d8ba497f",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Usuario General",
-              "description": "",
+              "description": "Se trata de un usuario anónimo, con o sin credenciales de sesión validas.",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -502,6 +502,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -585,11 +586,10 @@
               ]
             },
             "id": "af05e06f-8b51-40ad-aca3-9134bf4e11a1",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "Bibliotecario",
-              "description": "",
+              "description": "Usuario autenticado con el rol de bibliotecario.",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1227,6 +1227,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1310,7 +1311,6 @@
               ]
             },
             "id": "9a362be2-4514-4548-ac72-f29171fc8d33",
-            "zIndex": 11,
             "data": {
               "type": "tm.Store",
               "name": "MySQL DB",
@@ -1386,6 +1386,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1469,7 +1470,6 @@
               ]
             },
             "id": "428516a6-5abc-4eb5-bfc3-e3a592e7b6b5",
-            "zIndex": 12,
             "data": {
               "type": "tm.Store",
               "name": "Web App Config",
