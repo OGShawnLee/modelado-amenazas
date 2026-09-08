@@ -1517,6 +1517,98 @@
         "version": "2.6.2",
         "cells": [
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Usuario / Límite Servidor Web ",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "30738c00-f0fa-49f2-b6e4-96f7b13c0e1d",
+                "40a6a4a9-3ea6-4ff4-a15f-f86c3919402e"
+              ],
+              "containedElements": [
+                "71103aba-90b1-45cf-b946-164f347eefb2"
+              ]
+            },
+            "labels": [
+              "Frontera Usuario / Límite Servidor Web "
+            ],
+            "id": "39e89934-b2a5-43e8-b9af-5416baebacec",
+            "source": {
+              "x": 10,
+              "y": 30
+            },
+            "target": {
+              "x": 220,
+              "y": -60
+            },
+            "vertices": [
+              {
+                "x": 60,
+                "y": 80
+              },
+              {
+                "x": 180,
+                "y": 100
+              },
+              {
+                "x": 220,
+                "y": 20
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
+          },
+          {
             "position": {
               "x": 252.5,
               "y": 250
@@ -1537,6 +1629,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -1620,7 +1713,6 @@
               ]
             },
             "id": "5c42fe19-7ce5-44ba-9137-a242e215a3f4",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "Controlador Web",
@@ -1660,8 +1752,8 @@
           },
           {
             "position": {
-              "x": 140,
-              "y": 40
+              "x": 73.75,
+              "y": 0
             },
             "size": {
               "width": 112.5,
@@ -1679,6 +1771,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -1762,7 +1855,6 @@
               ]
             },
             "id": "71103aba-90b1-45cf-b946-164f347eefb2",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Usuario General",
@@ -1819,6 +1911,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -1902,7 +1995,6 @@
               ]
             },
             "id": "384e8f26-3264-4d9b-96e7-ffbdbb1b3d6f",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "MySQL DB",
@@ -1976,6 +2068,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -2059,7 +2152,6 @@
               ]
             },
             "id": "b8c5ccaa-0184-4b97-b7a6-cea3ce69d7f4",
-            "zIndex": 4,
             "data": {
               "type": "tm.Store",
               "name": "Vistas Web en Disco",
@@ -2189,7 +2281,9 @@
                   "score": ""
                 }
               ],
-              "trustBoundaryIds": [],
+              "trustBoundaryIds": [
+                "39e89934-b2a5-43e8-b9af-5416baebacec"
+              ],
               "threatFrequency": {
                 "tampering": 0,
                 "informationDisclosure": 1,
@@ -2261,7 +2355,9 @@
                   "score": ""
                 }
               ],
-              "trustBoundaryIds": [],
+              "trustBoundaryIds": [
+                "39e89934-b2a5-43e8-b9af-5416baebacec"
+              ],
               "threatFrequency": {
                 "tampering": 0,
                 "informationDisclosure": 1,
@@ -2464,7 +2560,9 @@
                   "score": ""
                 }
               ],
-              "trustBoundaryIds": [],
+              "trustBoundaryIds": [
+                "29625128-ecc8-4322-a51c-c32edf0d71a3"
+              ],
               "threatFrequency": {
                 "tampering": 0,
                 "informationDisclosure": 1,
@@ -2539,7 +2637,9 @@
                   "score": ""
                 }
               ],
-              "trustBoundaryIds": [],
+              "trustBoundaryIds": [
+                "29625128-ecc8-4322-a51c-c32edf0d71a3"
+              ],
               "threatFrequency": {
                 "tampering": 1,
                 "informationDisclosure": 1,
@@ -2590,6 +2690,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -2673,7 +2774,6 @@
               ]
             },
             "id": "eae28249-5393-4055-92ca-5ab3faa726d0",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "Inicio de Sesión",
@@ -2688,6 +2788,49 @@
               "privilegeLevel": "",
               "threats": []
             }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 12,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Frontera Servidor Web / MySQL DB",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "4f1f0da7-277a-470d-98ea-d940ec86b9ce",
+                "19c2dcae-3d03-4fb0-9588-3264056d9fe5"
+              ],
+              "containedElements": [
+                "384e8f26-3264-4d9b-96e7-ffbdbb1b3d6f"
+              ]
+            },
+            "labels": [
+              "Frontera Servidor Web / MySQL DB"
+            ],
+            "id": "29625128-ecc8-4322-a51c-c32edf0d71a3",
+            "source": {
+              "x": 820,
+              "y": 218
+            },
+            "target": {
+              "x": 600,
+              "y": 530
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 370
+              },
+              {
+                "x": 600,
+                "y": 470
+              }
+            ]
           }
         ]
       }
