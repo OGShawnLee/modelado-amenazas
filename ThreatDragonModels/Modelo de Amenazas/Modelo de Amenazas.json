@@ -13,7 +13,7 @@
     "diagrams": [
       {
         "id": 1,
-        "title": "Flujo de Datos",
+        "title": "Flujo de Datos de Sistema Bibliotecario",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
